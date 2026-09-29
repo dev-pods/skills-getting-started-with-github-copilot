@@ -1,132 +1,132 @@
-## Step 1: Hello Copilot
+## Passo 1: Olá, Copilot
 
-Welcome to your **"Getting Started with GitHub Copilot"** exercise! :robot:
+Boas-vindas ao seu exercício **"Primeiros Passos com o GitHub Copilot"**! :robot:
 
-In this exercise, you will be using different GitHub Copilot features to work on a website that allows students of Mergington High School to sign up for extracurricular activities. 🎻 ⚽️ ♟️
+Neste exercício, você vai usar diferentes recursos do GitHub Copilot para trabalhar em um site que permite que estudantes da Mergington High School se inscrevam em atividades extracurriculares. 🎻 ⚽️ ♟️
 
-<img width="600" alt="screenshot of Mergington High School WebApp" src="../images/mergington-high-school-webapp.png" />
+<img width="600" alt="captura de tela do WebApp da Mergington High School" src="../images/mergington-high-school-webapp.png" />
 
-### 📖 Theory: Getting to know GitHub Copilot
+### 📖 Teoria: conhecendo o GitHub Copilot
 
-<img width="150" align="right" alt="copilot logo" src="../images/copilot-logo.png" />
+<img width="150" align="right" alt="logo do copilot" src="../images/copilot-logo.png" />
 
-GitHub Copilot is an AI coding assistant that helps you write code faster and with less effort, allowing you to focus more energy on problem solving and collaboration.
+O GitHub Copilot é um assistente de programação com IA que ajuda você a escrever código mais rápido e com menos esforço, permitindo concentrar mais energia na resolução de problemas e na colaboração.
 
-GitHub Copilot has been proven to increase developer productivity and accelerate the pace of software development. For more information, see [Research: quantifying GitHub Copilot’s impact on developer productivity and happiness in the GitHub blog.](https://github.blog/news-insights/research/research-quantifying-github-copilots-impact-on-developer-productivity-and-happiness/)
+Já foi comprovado que o GitHub Copilot aumenta a produtividade de quem desenvolve e acelera o ritmo do desenvolvimento de software. Para mais informações, veja [Research: quantifying GitHub Copilot’s impact on developer productivity and happiness no blog do GitHub.](https://github.blog/news-insights/research/research-quantifying-github-copilots-impact-on-developer-productivity-and-happiness/)
 
-As you work in your IDE, you'll most often interact with GitHub Copilot in the following ways:
+Enquanto você trabalha na sua IDE, normalmente vai interagir com o GitHub Copilot das seguintes formas:
 
-| Interaction Mode          | 📝 Description                                                                                                                 | 🎯 Best For                                                                                                     |
+| Modo de interação        | 📝 Descrição                                                                                                                    | 🎯 Melhor para                                                                                                  |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
-| **⚡ Inline suggestions** | AI-powered code suggestions that appear as you type, offering context-aware completions from single lines to entire functions. | Completion of the current line, sometimes a whole new block of code                                             |
-| **💭 Inline Chat**        | Interactive chat scoped to your current file or selection. Ask questions about specific code blocks.                           | Code explanations, debugging specific functions, targeted improvements                                          |
-| **💬 Ask Mode**           | Optimized for answering questions about your codebase, coding, and general technology concepts.                                | Understanding how code works, brainstorming ideas, asking questions                                             |
-| **🤖 Agent Mode**         | Recommended default mode for most coding tasks: autonomous edits, tool use, and follow-through until the task is done.         | Daily coding tasks, from scoped fixes to larger multi-file implementation work                                   |
-| **🧭 Plan Agent**         | Optimized for drafting a plan and asking clarifying questions before any code changes are made.                                | When you want a reviewed plan first, then hand off to implementation                                            |
+| **⚡ Inline suggestions** | Sugestões de código com IA que aparecem conforme você digita, oferecendo complementos conscientes do contexto, de linhas únicas a funções inteiras. | Completar a linha atual e, às vezes, um bloco inteiro de código                                                 |
+| **💭 Inline Chat**        | Chat interativo com escopo no arquivo ou na seleção atual. Faça perguntas sobre blocos específicos de código.                     | Explicações de código, depuração de funções específicas, melhorias pontuais                                        |
+| **💬 Ask Mode**           | Otimizado para responder perguntas sobre sua base de código, programação e conceitos gerais de tecnologia.                        | Entender como o código funciona, gerar ideias, tirar dúvidas                                                    |
+| **🤖 Agent Mode**         | Modo padrão recomendado para a maioria das tarefas de programação: edições autônomas, uso de ferramentas e acompanhamento até concluir a tarefa. | Tarefas diárias de programação, de correções pontuais a implementações maiores em vários arquivos                |
+| **🧭 Plan Agent**         | Otimizado para elaborar um plano e fazer perguntas de esclarecimento antes de qualquer alteração de código.                       | Quando você quer primeiro um plano revisado e depois repassar para a implementação                               |
 
-As you work, you'll find GitHub Copilot can help out in several places across the `github.com` website and in your favorite coding environments such as VS Code, Jet Brains, and Xcode!
+Conforme você trabalha, vai perceber que o GitHub Copilot ajuda em vários lugares do site `github.com` e nos seus ambientes de programação favoritos, como VS Code, JetBrains e Xcode!
 
-For today's coding though, we will practice with VS Code in a pre-configured development environment known as a [GitHub Codespace](https://github.com/features/codespaces).
+Hoje, porém, vamos praticar com o VS Code em um ambiente de desenvolvimento pré-configurado conhecido como [GitHub Codespace](https://github.com/features/codespaces).
 
 > [!TIP]
-> You can learn more about current and upcoming features in the [GitHub Copilot Features](https://docs.github.com/en/copilot/about-github-copilot/github-copilot-features) documentation.
+> Você pode saber mais sobre os recursos atuais e futuros na documentação de [GitHub Copilot Features](https://docs.github.com/en/copilot/about-github-copilot/github-copilot-features).
 
-### :keyboard: Activity: Get a project intro from Copilot Chat
+### :keyboard: Atividade: receba uma introdução ao projeto pelo Copilot Chat
 
-Let's start up our development environment, use copilot to learn a bit about the project, and then give it a test run.
+Vamos iniciar nosso ambiente de desenvolvimento, usar o Copilot para aprender um pouco sobre o projeto e, em seguida, testá-lo.
 
-1. Use the below button to open the **Create Codespace** page in a new tab. Use the default configuration.
+1. Use o botão abaixo para abrir a página **Create Codespace** em uma nova aba. Use a configuração padrão.
 
    [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/{{full_repo_name}}?quickstart=1)
 
-1. Confirm the **Repository** field is your copy of the exercise, not the original, then click the green **Create Codespace** button.
-   - ✅ Your copy: `/{{full_repo_name}}`
-   - ❌ Original: `/skills/getting-started-with-github-copilot`
+1. Confirme que o campo **Repository** aponta para a sua cópia do exercício, e não para o original, e então clique no botão verde **Create Codespace**.
+   - ✅ Sua cópia: `/{{full_repo_name}}`
+   - ❌ Original: `/dev-pods/skills-getting-started-with-github-copilot`
 
-1. Wait a moment for Visual Studio Code to load in your browser.
-1. In the left sidebar, click the extensions tab and verify that the `GitHub Copilot Chat` and `Python` extensions are installed and enabled.
+1. Aguarde um momento até o Visual Studio Code carregar no seu navegador.
+1. Na barra lateral esquerda, clique na aba de extensões e verifique se as extensões `GitHub Copilot Chat` e `Python` estão instaladas e habilitadas.
 
-   <img width="350" alt="copilot extension for VS Code" src="../images/copilot-extension-vscode.png" />
+   <img width="350" alt="extensão do copilot para o VS Code" src="../images/copilot-extension-vscode.png" />
 
-   <img width="350" alt="python extension for VS Code" src="../images/python-extension-vscode.png" />
+   <img width="350" alt="extensão do python para o VS Code" src="../images/python-extension-vscode.png" />
 
    <details>
-   <summary>🔎 GitHub Copilot Chat extension missing ❓</summary>
+   <summary>🔎 A extensão GitHub Copilot Chat está faltando ❓</summary>
 
-   If the GitHub Copilot Chat extension is missing for you, ensure you are signed in to GitHub Copilot. Find the **GitHub Copilot** icon on the bottom right of the VS Code window.
+   Se a extensão GitHub Copilot Chat não aparecer para você, verifique se você está autenticado no GitHub Copilot. Procure o ícone do **GitHub Copilot** no canto inferior direito da janela do VS Code.
 
-   | Status bar icon                                                                                                         | Sign in required                                                                                         | Copilot active                                                                                                  |
+   | Ícone na barra de status                                                                                                | Login necessário                                                                                         | Copilot ativo                                                                                                   |
    | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-   | <img width="300" alt="Copilot menu prompting the user to use AI features" src="../images/copilot-sign-in-button.png" /> | <img width="300" alt="Copilot chat sign in button" src="../images/copilot-sign-in-button-clicked.png" /> | <img width="300" alt="Copilot menu showing inline suggestions enabled" src="../images/copilot-signed-in.png" /> |
+   | <img width="300" alt="menu do Copilot pedindo para usar os recursos de IA" src="../images/copilot-sign-in-button.png" /> | <img width="300" alt="botão de login do Copilot Chat" src="../images/copilot-sign-in-button-clicked.png" /> | <img width="300" alt="menu do Copilot mostrando as inline suggestions habilitadas" src="../images/copilot-signed-in.png" /> |
 
-   You should be good to go at this point, even if the extension is still not visible in the extensions tab.
+   A partir daqui você deve estar pronto para seguir, mesmo que a extensão ainda não apareça na aba de extensões.
 
    </details>
 
-1. At the top of VS Code, locate and click the **Toggle Chat icon** to open a Copilot Chat side panel.
+1. No topo do VS Code, localize e clique no ícone **Toggle Chat** para abrir o painel lateral do Copilot Chat.
 
    <img width="150" alt="image" src="../images/toggle-chat-icon.png" />
 
-   > 🪧 **Note:** If this is your first time using GitHub Copilot, you may need to accept the usage terms to continue.
+   > 🪧 **Observação:** se esta for a sua primeira vez usando o GitHub Copilot, talvez seja necessário aceitar os termos de uso para continuar.
 
 
-1. Make sure you are in **Ask Mode** for our first interaction
+1. Certifique-se de estar no **Ask Mode** para nossa primeira interação.
 
-   <img width="350" alt="screenshot showing Ask Mode selection in Copilot Chat" src="../images/ask-mode-selection.png" />
+   <img width="350" alt="captura de tela mostrando a seleção do Ask Mode no Copilot Chat" src="../images/ask-mode-selection.png" />
 
-1. Enter the below prompt to ask Copilot to introduce you to the project.
+1. Digite o prompt abaixo para pedir ao Copilot que apresente o projeto para você.
 
    > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=social&logo=github%20copilot)
    >
    > ```prompt
-   > Please briefly explain the structure of this project.
-   > What should I do to run it?
+   > Explique brevemente a estrutura deste projeto.
+   > O que eu preciso fazer para executá-lo?
    > ```
 
-   > 🪧 **Note:** It is not necessary to follow Copilot's recommended instructions. We have already prepared the environment for you.
+   > 🪧 **Observação:** não é necessário seguir as instruções recomendadas pelo Copilot. Já preparamos o ambiente para você.
 
-1. Now that we know a bit more about the project, let's actually try running it! In the left sidebar, select the `Run and Debug` tab and then press the **Start Debugging** icon.
+1. Agora que conhecemos um pouco mais o projeto, vamos realmente executá-lo! Na barra lateral esquerda, selecione a aba `Run and Debug` e clique no ícone **Start Debugging**.
 
    <img width="300" alt="image" src="../images/run-and-debug-tab.png" />
 
-1. We want to see our webpage running in a browser, so let's find the url and port. If it isn't visible, expand the lower panel and select the **Ports** tab.
+1. Queremos ver nossa página rodando em um navegador, então vamos descobrir a URL e a porta. Se não estiver visível, expanda o painel inferior e selecione a aba **Ports**.
 
-1. In the list, find port `8000` and the related link. Hover over the link and select the **Open in browser** icon.
+1. Na lista, encontre a porta `8000` e o link relacionado. Passe o mouse sobre o link e selecione o ícone **Open in browser**.
 
    ![image](../images/open-in-browser-icon.png)
 
-### :keyboard: Activity: Use Copilot to help remember a terminal command 🙋
+### :keyboard: Atividade: use o Copilot para lembrar um comando de terminal 🙋
 
-Great work! Now that we are familiar with the app and we know it works, let's ask copilot for help starting a branch so we can do some customizing.
+Bom trabalho! Agora que conhecemos a aplicação e sabemos que ela funciona, vamos pedir ajuda ao Copilot para criar uma branch e fazer algumas personalizações.
 
-1. In VS Code's bottom panel, select the **Terminal** tab and on the right side click the plus `+` sign to create a new terminal window.
+1. No painel inferior do VS Code, selecione a aba **Terminal** e, do lado direito, clique no sinal de mais `+` para criar uma nova janela de terminal.
 
-   > 🪧 **Note:** This will avoid stopping the existing debug session that is hosting our web application service.
+   > 🪧 **Observação:** isso evita interromper a sessão de debug existente que está hospedando o serviço da nossa aplicação web.
 
-1. Within the new terminal window use the keyboard shortcut `Ctrl + I` (windows) or `Cmd + I` (mac) to bring up **Copilot's Terminal Inline Chat**.
+1. Na nova janela de terminal, use o atalho de teclado `Ctrl + I` (Windows) ou `Cmd + I` (Mac) para abrir o **Terminal Inline Chat do Copilot**.
 
-1. Let's ask Copilot to help us remember a command we have forgotten: creating a branch and publishing it.
+1. Vamos pedir ao Copilot que nos ajude a lembrar um comando que esquecemos: criar uma branch e publicá-la.
 
    > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=social&logo=github%20copilot)
    >
    > ```prompt
-   > Hey copilot, how can I create and publish a new Git branch called "accelerate-with-copilot"?
+   > Ei Copilot, como eu crio e publico uma nova branch do Git chamada "accelerate-with-copilot"?
    > ```
 
-   > 💡 **Tip:** If Copilot doesn't give you quite what you want, you can always continue explaining what you need. Copilot will remember the conversation history for follow-up responses.
+   > 💡 **Dica:** se o Copilot não devolver exatamente o que você quer, você sempre pode continuar explicando o que precisa. O Copilot lembra do histórico da conversa nas respostas seguintes.
 
-1. Press the `Run` button to let Copilot insert the terminal command for us. No need to copy and paste!
+1. Pressione o botão `Run` para deixar o Copilot inserir o comando no terminal para nós. Sem precisar copiar e colar!
 
-1. After a moment, look in the VS Code lower status bar, on the left, to see the active branch. It should now say `accelerate-with-copilot`. If so, you are all done with this step!
+1. Depois de um instante, olhe na barra de status inferior do VS Code, à esquerda, para ver a branch ativa. Ela deve indicar `accelerate-with-copilot`. Se sim, você concluiu este passo!
 
-1. Now that your branch is pushed to GitHub, Mona should already be busy checking your work. Give her a moment and keep watch in the comments. You will see her respond with progress info and the next lesson.
+1. Agora que sua branch foi enviada para o GitHub, a Mona já deve estar verificando seu trabalho. Dê um tempo a ela e fique de olho nos comentários. Você verá a resposta dela com informações de progresso e a próxima lição.
 
 <details>
-<summary>Having trouble? 🤷</summary><br/>
+<summary>Com dificuldades? 🤷</summary><br/>
 
-If you don't get feedback, here are some things to check:
+Se você não receber retorno, confira alguns pontos:
 
-- Make sure your created the branch with the exact name `accelerate-with-copilot`. No prefixes or suffixes.
-- Make sure the branch was indeed published to your repository.
+- Verifique se você criou a branch com o nome exato `accelerate-with-copilot`. Sem prefixos ou sufixos.
+- Verifique se a branch foi realmente publicada no seu repositório.
 
 </details>

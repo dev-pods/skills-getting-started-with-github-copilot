@@ -1,89 +1,89 @@
-## Step 4: Plan your implementation with the Planning Agent 🧭
+## Passo 4: Planeje sua implementação com o Planning Agent 🧭
 
-In the last step, Agent Mode helped us move fast and ship new functionality. 🚀
+No último passo, o Agent Mode nos ajudou a avançar rápido e entregar novas funcionalidades. 🚀
 
-Now let's slow down for one round and work like architects: define a strong testing approach first, then hand it off for implementation. This gives us better clarity, fewer surprises, and cleaner results. 🧪
+Agora vamos desacelerar por uma rodada e trabalhar como pessoas arquitetas: primeiro definir uma boa abordagem de testes e depois repassar para a implementação. Isso traz mais clareza, menos surpresas e resultados mais limpos. 🧪
 
-### 📖 Theory: What is Copilot Plan Agent?
+### 📖 Teoria: o que é o Copilot Plan Agent?
 
-Copilot [Plan Agent](https://code.visualstudio.com/docs/copilot/agents/planning) helps you design a solution before any code is changed.
+O [Plan Agent](https://code.visualstudio.com/docs/copilot/agents/planning) do Copilot ajuda você a desenhar uma solução antes de qualquer alteração de código.
 
-Instead of jumping straight into edits, it researches your request, asks clarifying questions, and drafts an implementation plan you can refine.
+Em vez de partir direto para as edições, ele pesquisa sua solicitação, faz perguntas de esclarecimento e elabora um plano de implementação que você pode refinar.
 
-#### Plan Agent (at a glance)
+#### Plan Agent (visão geral)
 
-| Aspect | 🧭 Plan Agent |
+| Aspecto | 🧭 Plan Agent |
 | --- | --- |
-| Purpose | Creates a structured implementation plan before coding starts. |
-| Context gathering | Uses read-only research to understand requirements and constraints. |
-| Collaboration style | Asks clarifying questions, then updates the plan using your answers. |
-| Iteration | Supports multiple refinement passes before implementation. |
-| Safety | Does not edit files until you approve the plan and hand off to **Agent Mode**. |
-| Handoff | **Start implementation** button hands off the approved plan to **Agent Mode** for coding. |
+| Objetivo | Cria um plano de implementação estruturado antes de começar a programar. |
+| Coleta de contexto | Usa pesquisa somente leitura para entender requisitos e restrições. |
+| Estilo de colaboração | Faz perguntas de esclarecimento e atualiza o plano com suas respostas. |
+| Iteração | Permite várias rodadas de refinamento antes da implementação. |
+| Segurança | Não edita arquivos até que você aprove o plano e repasse para o **Agent Mode**. |
+| Repasse | O botão **Start implementation** entrega o plano aprovado ao **Agent Mode** para a codificação. |
 
 > [!TIP]
-> You can start from a high-level request and then add constraints and details in follow-up prompts.
+> Você pode começar com uma solicitação de alto nível e depois adicionar restrições e detalhes em prompts de acompanhamento.
 
-### ⌨️ Activity: Plan and implement backend tests
+### ⌨️ Atividade: planejar e implementar os testes de backend
 
-Your backend still has zero test coverage. Use **Plan Agent** to create a plan, answer questions, and then launch implementation.
+Seu backend ainda está com zero cobertura de testes. Use o **Plan Agent** para criar um plano, responder às perguntas e então iniciar a implementação.
 
-1. Open the **Copilot Chat** panel and switch to **Plan Agent**.
+1. Abra o painel do **Copilot Chat** e alterne para o **Plan Agent**.
 
    <img width="350" alt="image" src="../images/plan-mode-dropdown.png" />
 
 
-1. Let's start with a broad prompt and Copilot will help us fill in the details:
+1. Vamos começar com um prompt amplo e o Copilot nos ajudará a preencher os detalhes:
 
    > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=social&logo=github%20copilot)
    >
    > ```prompt
-   > Let's plan for adding backend FastAPI tests in a separate tests directory.
+   > Vamos planejar a adição de testes de backend com FastAPI em um diretório de testes separado.
    > ```
 
-1. Wait for Copilot to generate its first plan. If it asks you any questions, answer them to the best of your ability. 
+1. Aguarde o Copilot gerar seu primeiro plano. Se ele fizer perguntas, responda da melhor forma possível.
 
-   > 🪧 **Note:** Don't worry about getting it perfect, you can always refine the plan later.
+   > 🪧 **Observação:** não se preocupe em deixar perfeito, você sempre pode refinar o plano depois.
 
-1. You can refine the plan and provide additional details in follow up prompts
+1. Você pode refinar o plano e fornecer detalhes adicionais em prompts de acompanhamento.
 
-   Here are some examples:
+   Alguns exemplos:
 
    > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=social&logo=github%20copilot)
    >
    > ```prompt
-   > Let's use the AAA (Arrange-Act-Assert) testing pattern to structure our tests
+   > Vamos usar o padrão de testes AAA (Arrange-Act-Assert) para estruturar nossos testes
    > ```
 
    > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=social&logo=github%20copilot)
    >
    > ```prompt
-   > Make sure we use `pytest` and add it to `requirements.txt` file
+   > Garanta que usemos `pytest` e adicione-o ao arquivo `requirements.txt`
    > ```
 
 
-1. Review the proposed plan and when you are happy with it, click **Start implementation** to hand off to **Agent Mode**.
+1. Revise o plano proposto e, quando estiver satisfeito, clique em **Start implementation** para repassar ao **Agent Mode**.
 
    <img width="350" alt="image" src="../images/plan-mode-start-implementation.png" />
 
-   Notice that clicking the button switched from **Plan** to **Agent Mode**. From this point on, Copilot can edit your codebase, just like before.
+   Note que clicar no botão alternou do **Plan** para o **Agent Mode**. Deste ponto em diante, o Copilot pode editar sua base de código, como antes.
 
-1. Watch Copilot implement the plan you just created. It may ask for permissions to run certain tools (e.g., run commands or create virtual environments). Approve these permissions so it can continue working.
+1. Acompanhe o Copilot implementando o plano que você acabou de criar. Ele pode pedir permissão para executar certas ferramentas (por exemplo, rodar comandos ou criar ambientes virtuais). Aprove essas permissões para que ele possa continuar trabalhando.
 
-1. Review the changes and make sure tests run successfully. If needed, continue guiding until implementation is complete.
+1. Revise as alterações e confirme que os testes rodam com sucesso. Se necessário, continue orientando até a implementação ficar completa.
 
-   **🎯 Goal: Get all tests passing (green) before you move on. ✅**
+   **🎯 Objetivo: deixar todos os testes passando (verdes) antes de seguir adiante. ✅**
 
-   > 🪧 **Note:** Agent Mode may complete this in one pass, or it may need follow-up prompts from you.
+   > 🪧 **Observação:** o Agent Mode pode concluir isso de uma vez ou pode precisar de prompts de acompanhamento seus.
 
-1. **Commit** and **push** all your changes to the `accelerate-with-copilot` branch.
+1. Faça **commit** e **push** de todas as suas alterações para a branch `accelerate-with-copilot`.
 
-1. Wait for Mona to check your work and share the next step.
+1. Aguarde a Mona verificar seu trabalho e compartilhar o próximo passo.
 
 <details>
-<summary>Having trouble? 🤷</summary><br/>
+<summary>Com dificuldades? 🤷</summary><br/>
 
-- If tests did not run, ask Copilot to run them for you.
-- Make sure `pytest` is added in `requirements.txt` and a `tests/` directory exists.
+- Se os testes não rodaram, peça ao Copilot que os execute para você.
+- Verifique se o `pytest` foi adicionado ao `requirements.txt` e se existe um diretório `tests/`.
 
 </details>
